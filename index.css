@@ -1,0 +1,634 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Edu+SA+Beginner&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Asap Condensed', sans-serif;
+}
+body{
+    background-color: #000;
+    /* background-image: url(images/back.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#start-container{
+    background-image: url(images/peakpx.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+}
+#myVideo{
+    border-left: 10px solid rgb(7, 7, 6);
+    border-radius: 50%;
+    position: relative;
+    height:400px;
+    float: right;  
+    margin-top: -170px; 
+    margin-right: -110px;
+}
+.header{
+    padding: 0;
+}
+nav{ 
+    position:relative;
+    width:60%;
+    margin-left: -30px;
+    padding: 20px 0;
+    text-align: center; 
+    transform: skewX(-20deg);
+    z-index: 100;  
+    
+}
+nav ul{
+    background: #000;
+    width:100%;
+    box-shadow: 5px 5px 5px orangered;
+}
+nav ul li{
+    color:white;
+    display: inline-block;
+    list-style: none;
+    margin:20px 30px;
+    cursor: pointer;
+    text-shadow: 2px 2px 2px orangered;
+} 
+nav ul li:hover{
+    color: rgb(119, 122, 124);
+}
+nav.sticky{
+    position:fixed;
+    top:0;
+    left:0;
+    padding: 10px 8%;
+    background:#000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: padding 1s;
+}
+
+#first-photo img{
+    border-top: 7px solid black;
+    border-radius: 50%;
+    width: 200px;
+    height:200px;
+    position: absolute;
+    top:50%;
+    left: 0;    
+    z-index: 20;
+}
+#heading{
+    color: white;
+    font-family: 'Edu SA Beginner', cursive;
+    position: relative;
+    z-index: 1;
+}
+#heading2{
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 50px;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+#menu-btn{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    display: none;
+    padding:13px;
+    z-index: 1;
+ }
+ #menu-btn i{
+     color:white;
+     font-size: 30px;
+ }
+ .main{
+    height: 100%;
+    display: grid;
+    grid-template-columns:40% 60%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+    color: white;
+ }
+ #sub-content{
+    width:100%;
+    height: 100%;
+    align-content: space-around;
+    overflow: hidden;
+    transition: width 2s, height 4s;
+ }
+ .sub{
+    position: relative;
+    top: 0;
+    left: 0;
+ }
+.s_content{
+    display: flex;
+    margin: 20px 10px;
+    position: relative;
+    top: 20px;
+    left:100%;
+    width: 900px;
+    transition:left 1s linear;
+ }
+ .s_content a,.s_content p {
+    font-family: 'Asap Condensed', sans-serif;
+    color: white;
+ }
+ #sub-content img{
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+ }
+ #main-content{
+   position: relative;
+   height: 95%;
+   border-radius: 20px;
+   margin:0 20px;
+ }
+ #main-content::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background:rgba(11, 3, 252, 0.3);
+    z-index: 0;
+}
+ #main-content img{
+    height: 100%;
+    width:100%;
+    border-radius: 20px;
+    
+ }
+ #main-content a{
+    position: absolute;
+    font-family: 'Asap Condensed', sans-serif;
+    color: white;
+    font-size:30px;
+    top: 30%;
+    left:5%;
+    z-index: 1;
+ }
+ #main-content p{
+    position: absolute;
+    font-family: 'Asap Condensed', sans-serif;
+    color: white;
+    font-size: 20px;
+    top: 45%;
+    left: 7%;
+    z-index: 1;
+ }
+ #btn{
+    color: white;
+    width: 30%;
+    padding: 5px;
+    background-color: orangered;
+    font-size: 20px;
+    border-radius: 5px;
+ }
+.first-content{
+    display: flex;
+    justify-content: center;
+}
+.tabs{
+   background-color:orangered;
+   color: white;
+   padding: 10px;
+   font-size: 20px;
+   margin: 5px 20px;
+   cursor: pointer;
+   border-radius: 7px;
+   border: 2px solid black;
+}
+.tabs:hover{
+    background: transparent;
+  
+}
+.img-fluid{
+    width:100%;
+}
+.grid{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-color:black;
+}
+.grid-items{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: white;
+}
+.blog{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    margin: 10px 5px;
+    width: 400px;
+}
+.blog a{
+  color: white;
+  font-size: 20px;
+}
+.blog img:hover{
+    transition: 2s;
+    overflow: hidden;
+    cursor: pointer;
+    transform: scale(1.4);
+ }
+#science-blogs{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.section1{
+    margin-top: 20px;
+    border-radius: 15px;
+}
+.section1-item,.section2-item{
+    display: flex;
+    justify-content: center;
+     margin: 10px 50px;
+}
+.s1-blog{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+.s1-blog img{
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+  }
+.s1-blog a{
+    color: black;
+    font-size: 20px;
+  }
+.section3-item{
+    margin: 10px 30px;
+}
+.s3-blogs{
+   display: flex;
+   background-color: white;
+   margin: 20px 10px;
+   position: relative;
+}
+.s3-blogs img{
+   width: 100%;
+   height: 300px;
+   
+ }
+.sience-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+ }
+ .s2-items{
+    background-color: white;
+    margin: 20px 30px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+ }
+ .s2-items h2{
+    color: orangered;
+ }
+ .hisorical{
+    overflow: hidden;
+    margin: 10px 40px;
+ }
+ .historical-blogs{
+    display: flex;
+    background-color: white;
+ }
+ .h-blogs img{
+    margin-right: 10px;
+    width: 370px;
+    height: 500px;
+ }
+ .h-blogs a{
+  color:black;
+  font-size: 20px;
+ }
+ #icons i{
+    font-size: 30px;
+    color: rgb(123, 120, 120);
+    justify-content: space-between;
+    margin: 10px 30px;
+    cursor: pointer;
+ }
+#testi{
+    margin-top: 40px;
+    position: relative;
+    height:400px;
+    z-index:0;
+}
+#testi img{
+    width:100%;
+    height: 100%;
+}
+#testi::after {
+    content: "";  /*::before and ::after both require content */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg, #eaee44, #3d33ff);
+    opacity: 0.7;
+}
+#review
+{ 
+    width: 200vw;
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.reviews{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:white;
+    height:350px;
+    width: 300px;
+    margin: 10px;
+}
+#stars i{
+    color: #f0f407;
+}
+.photo{
+    border: 2px solid rgb(209, 207, 207);
+    border-radius:50%;
+    width: 150px;
+    height: 140px;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.slider{
+    position: absolute;
+    width: 58vw;
+    align-self: center;
+    left: 20%;
+    z-index: 1;
+    overflow: hidden;
+}
+footer{
+    margin-top: 20px; 
+    background-color:orangered;
+    width: 100vw;
+ 
+ }
+ 
+ .footerinfo h3{
+     font-size:18px;
+ }
+ #footericon{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     margin-top: 20px;
+     z-index: 1;
+ }
+ #footericon i{
+     font-size:25px;
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     margin: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+ }
+ #facebook i{
+     color: rgb(5, 56, 165);
+     background-color: white;
+ }
+ #linkedin i{
+     color: rgb(4, 45, 249);
+     background-color: white;
+ }
+ #twitter i{
+     color: rgb(10, 88, 133);
+     background-color: white;
+ }
+ #insta i{
+     color:rgb(238, 11, 140);
+     background-color: white;
+ }
+ #youtube i{
+     color: rgb(217, 12, 12);
+     background-color: white;
+ }
+ #extra{
+     display: flex;
+     justify-content: center;
+     color:rgb(8, 251, 8);
+     text-decoration: underline;
+     margin:10px;
+ }
+@media screen and (max-width:1300px){
+    #myVideo{
+        height:300px;
+    }
+
+}
+@media screen and (max-width:1000px){
+    #myVideo{
+        height:250px;
+        margin-top: -115px; 
+        margin-right: -90px;
+    }
+    .s_content a{
+       font-size:20px;
+    }
+    .blog{
+        width: 300px;
+    }
+    .s1-blog a{
+      width: 100px;
+      font-size: 15px;
+    }
+    .s2-items{
+        margin: 20px 5px;
+      
+     }
+     .hisorical{
+        margin: 10px 5px;
+     }
+     #icons i{
+        font-size: 20px;
+        margin: 10px 10px;
+     }
+     .h-blogs img{
+        width: 260px;
+     }
+     .desc{
+        font-size: 12px;
+    }
+    .review{
+        width: 100%;
+    }
+    .reviews{
+        width: 600px;
+        margin: 10px;
+    }
+    nav{ 
+        position:relative;
+        width:60%;
+        margin-left:-10px;  
+    }
+    nav ul li{
+      font-size: 15px;
+      margin: 15px 10px;
+    } 
+
+}
+@media screen and (max-width:750px){
+   #heading2{
+    font-size: 30px;
+   }
+   #main-content a{
+    font-size:20px;
+    top: 30%;
+    left:5%;
+    }
+    #main-content p{
+        font-size:13px;
+        top: 45%;
+        left: 7%;
+    }
+    .tabs{
+        font-size: 13px;
+    }
+    .blog{
+        width: 200px;
+    }
+    .s1-blog img{
+        width: 60px;
+        height: 80px;
+    }
+    .s1-blog a{
+        font-size: 10px;
+    }
+    .s2-items h2{
+      font-size: 15px;
+    }
+    .s2-items p{
+        font-size: 13px;
+      }
+}
+@media screen and (max-width:620px){
+    nav{ 
+        position:relative;
+        width:60%;
+        margin-left:-10px;  
+    }
+    nav ul li{
+      font-size: 15px;
+      margin: 15px 10px;
+    } 
+    #btn{
+        width: 50%;
+    }
+
+}
+@media screen and (max-width:560px){
+    #menu-btn{
+        display: block;
+        background-color: black;
+        width: 20px;
+        z-index: 2;
+    }
+    nav{ 
+       display: none;  
+    } 
+    #myVideo{
+        height:150px;
+        margin-top: -80px; 
+        margin-right: -70px;
+    }
+    .blog{
+        width: 150px;
+    }
+    .blog a{
+        font-size: 15px;
+    }
+    #science-blogs{
+        display: flex;
+        flex-direction: column;
+    }
+    .s2-items h2{
+        font-size: 20px;
+      }
+    .s2-items p{
+      font-size: 17px;
+    }
+    .tabs{
+        width: 70px;
+        margin: 10px 5px;
+    }
+    .slider{
+        width:100vw;
+        align-self: flex-start;
+        left:0;
+    }
+    .section1-item,.section2-item{
+        display: flex;
+        flex-direction: column;
+         margin: 10px 50px;
+    }
+    .s1-blog{
+        width: 100%;
+    }
+    .s1-blog a{
+        width: 100%;
+        font-size:16px;
+    }
+
+}
+
+@media screen and (max-width:370px){
+    .section3-item{
+        margin: 10px 0px;
+    }
+    .grid{
+        display: flex;
+        flex-direction: column;
+    }
+    .blog{
+        width:100%;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    #main-content{
+        position: relative;
+        height: 500px;
+      }
+   
+}
